@@ -53,9 +53,9 @@ int main(int argc, char *argv[]) {
 
     QObject::connect(openButton, &QPushButton::clicked, [&source_image, image](){
         auto file_path = QFileDialog::getOpenFileName(nullptr,
-                                     "Open jpg Image",
+                                     "Open png Image",
                                      "G:\\work\\Prog\\progs\\DZ38_3",
-                                     "jpg files (*.jpg)");
+                                     "png files (*.png)");
         source_image = QImage(file_path);
         image->setPixmap(QPixmap::fromImage(source_image).scaled(
                 image->width(),
